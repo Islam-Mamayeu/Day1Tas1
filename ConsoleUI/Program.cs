@@ -14,6 +14,7 @@ namespace ConsoleUI
 
             double prec = 0;
             double number = 0;
+            double result;
             int n = 0;
             bool isInt;
             Console.WriteLine("Enter number:");
@@ -22,7 +23,10 @@ namespace ConsoleUI
             isInt = Int32.TryParse(Console.ReadLine(), out n);
             Console.WriteLine("Enter precision:");
             isInt = double.TryParse(Console.ReadLine(), out prec);
-            NutonClass.Root(number, n, prec);
+            result = NutonClass.Root(number, n, prec);
+            Console.WriteLine(result);
+            Console.WriteLine(Math.Pow(number, 1.0 / n));
+            Console.ReadKey();
 
 
         }
